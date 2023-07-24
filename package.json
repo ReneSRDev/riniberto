@@ -4,7 +4,7 @@
   "description": "Un sitio landing que muestre mis proyectos.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d src"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ReneSRDev/riniberto/issues"
   },
-  "homepage": "https://github.com/ReneSRDev/riniberto#readme"
+  "homepage": "https://github.com/ReneSRDev/riniberto#readme",
+  "dependencies": {
+    "gh-pages": "^5.0.0"
+  }
 }
