@@ -1,0 +1,233 @@
+/*VARIABLES*/
+:root {
+    --bg-primary:   #FFFFFF;
+    --bg-secondary: #120340;
+
+    --color-primary:    #FFFFFF;
+    --color-secondary:  #3B0ACC;
+    --color-tertiary:   #16044D;
+
+    --white:    #FFFFFF;
+    --dark:     #000000;
+
+    --font-family-primary:    'Inconsolata', sans-serif;
+    --font-family-secondary:  'Montserrat', sans-serif;
+
+    --font-size-sm:     14px;
+    --font-size-md:     16px;
+    --font-size-lg:     18px;
+}
+
+/*GENERAL*/
+body {
+    font-family: var(--font-family-primary);
+    background-color: var(--bg-primary);
+    font-size: var(--font-size-sm);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*HEADER*/
+header {
+    background-color: var(--bg-secondary);
+}
+
+header.navbar {
+    padding: 0;
+}
+
+.navbar .header-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+
+    @media (min-width: 992px) {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding: 0;
+    }
+    @media (min-width: 1200px) {
+        height: 150px;
+    }
+}
+
+.header-logo a{
+    display: inline-block;
+}
+
+.header-logo a img {
+    max-width: 150px;
+
+    @media (min-width: 992px) {
+        max-width: 200px;
+    }
+    @media (min-width: 1200px) {
+        max-width: none;
+    }
+}
+
+.navbar-toggler {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-image: none;
+}
+
+.navbar-toggler .navbar-toggler-icon .fa{
+    transition: 0.3s color ease-in-out;
+    line-height: 30px;
+    font-size: 25px;
+    color: var(--color-primary);
+}
+
+.navbar-toggler .navbar-toggler-icon .fa:before {
+    transition: 0.3s content ease-in-out;
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon .fa:before {
+    content: "\f0c9";
+}
+
+.navbar-toggler .navbar-toggler-icon .fa:hover{
+    color: var(--color-secondary);
+}
+
+nav {
+    @media (max-width: 991px) {
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        background-color: var(--color-tertiary);
+    }
+    @media (min-width: 992px) {
+        width: calc(100% - 200px);
+    }
+    @media (min-width: 1200px) {
+        width: calc(100% - 300px);
+    }
+}
+
+nav .container {
+    @media (min-width: 992px) {
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+nav .nav-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: 992px) {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
+    @media (min-width: 1200px) {
+        margin-left: 45px;
+    }
+}
+
+nav .nav-menu li a {
+    display: inline-block;
+    line-height: 30px;
+    font-size: var(--font-size-md);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    text-transform: uppercase;
+
+    @media (min-width: 992px) {
+        line-height: 50px;
+        padding: 0 15px;
+    }
+    @media (min-width: 1200px) {font-size: var(--font-size-lg);}
+}
+
+nav .header-social {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (max-width: 991px) {
+        display: none;
+    }
+    @media (min-width: 992px) {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+}
+
+nav .header-social li {
+    margin-left: 10px;
+
+    @media (min-width: 1400px) {margin-left: 20px;}
+}
+
+nav .header-social li a {
+    display: inline-block;
+    font-size: var(--font-size-lg);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+nav .header-contact {
+    @media (min-width: 992px) {margin-left: 15px;}
+    @media (min-width: 1200px) {margin-left: 30px;}
+}
+
+nav .header-contact a {
+    display: inline-block;
+    line-height: 30px;
+    font-size: var(--font-size-md);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    text-transform: uppercase;
+
+    @media (min-width: 992px) {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 5px;
+        background-color: var(--color-secondary);
+        font-size: var(--font-size-lg);
+    }
+}
+
+nav .header-contact a .fa {
+    @media (max-width: 991px) {
+        display: none;
+    }
+}
