@@ -733,13 +733,13 @@ main {
 }
 @media (min-width: 768px) {
     .habilidades-title {
-        margin-bottom: 45px;
+        margin-bottom: 85px;
     }
 }
 @media (min-width: 1200px) {
     .habilidades-title {
         width: 100%;
-        margin-bottom: 55px;
+        margin-bottom: 125px;
     }
 }
 .habilidades-title span {
@@ -769,22 +769,59 @@ main {
     flex-wrap: wrap;
     justify-content: center;
 }
+@media (min-width: 768px) {
+    .habilidades-list ul {
+        padding: 0 65px;
+    }
+}
+@media (min-width: 1200px) {
+    .habilidades-list ul {
+        padding: 0 85px;
+    }
+}
 .habilidades-list ul li {
     width: 50%;
     text-align: center;
+}
+@media (min-width: 768px) {
+    .habilidades-list ul li {
+        width: 33.33%;
+    }
 }
 .habilidades-list ul li:nth-child(2) {
     margin-top: 90px;
     margin-left: -30px;
 }
+@media (min-width: 768px) {
+    .habilidades-list ul li:nth-child(2) {
+        margin-top: 0;
+        margin-left: 0;
+    }
+}
 .habilidades-list ul li:nth-child(3) {
     margin-right: -30px;
+}
+@media (min-width: 768px) {
+    .habilidades-list ul li:nth-child(3) {
+        margin-right: 0;
+    }
 }
 .habilidades-list ul li:nth-child(4) {
     margin-top: 90px;
 }
+@media (min-width: 768px) {
+    .habilidades-list ul li:nth-child(4) {
+        margin-top: 0;
+        margin-left: 0;
+    }
+}
 .habilidades-list ul li:nth-child(5) {
     margin-left: -110px;
+}
+@media (min-width: 768px) {
+    .habilidades-list ul li:nth-child(5) {
+        margin-left: 0;
+    }
 }
 .habilidades-list ul li div {
     display: inline-flex;
@@ -796,10 +833,38 @@ main {
     border-radius: 3px;
     transform: rotate(45deg);
 }
+@media (min-width: 768px) {
+    .habilidades-list ul li div {
+        width: 120px;
+        height: 120px;
+    }
+}
+@media (min-width: 992px) {
+    .habilidades-list ul li div {
+        width: 150px;
+        height: 150px;
+    }
+}
+@media (min-width: 1200px) {
+    .habilidades-list ul li div {
+        width: 200px;
+        height: 200px;
+    }
+}
 .habilidades-list ul li div .fa, .habilidades-list ul li div .fa-brands {
     font-size: 50px;
     color: var(--color-primary);
     transform: rotate(-45deg);
+}
+@media (min-width: 992px) {
+    .habilidades-list ul li div .fa, .habilidades-list ul li div .fa-brands {
+        font-size: 60px;
+    }
+}
+@media (min-width: 1200px) {
+    .habilidades-list ul li div .fa, .habilidades-list ul li div .fa-brands {
+        font-size: 90px;
+    }
 }
 
 .habilidades-img{
@@ -809,12 +874,13 @@ main {
 }
 @media (min-width: 768px) {
     .habilidades-img{
-        margin: 0 auto;
+        margin: 80px auto 0;
         width: 50%;
     }
 }
 @media (min-width: 1200px) {
     .habilidades-img{
+        margin-top: 130px;
         width: 60%;
     }
 }
