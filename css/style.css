@@ -889,3 +889,269 @@ main {
     width: auto;
     max-width: 100%;
 }
+
+/*PROYECTOS*/
+.index-proyectos {
+    background-color: var(--bg-secondary);
+}
+
+.index-proyectos >div {
+    padding: 30px 15px;
+    text-align: center;
+}
+@media (max-width: 767px) {
+    .index-proyectos >div {
+        max-width: 320px;
+    }
+}
+@media (min-width: 768px) {
+    .index-proyectos >div {
+        padding: 50px 0;
+    }
+}
+@media (min-width: 992px) {
+    .index-proyectos >div {
+        padding: 75px 0;
+    }
+}
+@media (min-width: 1200px) {
+    .index-proyectos >div {
+        padding: 100px 0;
+    }
+}
+
+.proyectos-title {
+    margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+    .proyectos-title {
+        margin-bottom: 45px;
+    }
+}
+@media (min-width: 1200px) {
+    .proyectos-title {
+        margin-bottom: 55px;
+    }
+}
+.proyectos-title span {
+    line-height: 30px;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+@media (min-width: 768px) {
+    .proyectos-title span {
+        line-height: 42px;
+        font-size: 42px;
+    }
+}
+@media (min-width: 992px) {
+    .proyectos-title span {
+        line-height: 62px;
+        font-size: 62px;
+    }
+}
+
+.proyectos-text span {
+    line-height: 40px;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--color-primary);
+    text-transform: uppercase;
+}
+@media (min-width: 768px) {
+    .proyectos-text span {
+        line-height: 52px;
+        font-size: 52px;
+    }
+}
+@media (min-width: 992px) {
+    .proyectos-text span {
+        line-height: 72px;
+        font-size: 72px;
+    }
+}
+
+/*MI MUSICA*/
+.index-musica {
+    background-color: var(--bg-secondary);
+}
+
+.index-musica >div {
+    padding: 30px 0;
+    text-align: center;
+}
+@media (max-width: 767px) {
+    .index-musica >div {
+        max-width: 320px;
+    }
+}
+@media (min-width: 768px) {
+    .index-musica >div {
+        padding: 50px 0;
+    }
+}
+@media (min-width: 992px) {
+    .index-musica >div {
+        padding: 75px 0;
+    }
+}
+@media (min-width: 1200px) {
+    .index-musica >div {
+        padding: 100px 0;
+    }
+}
+
+.musica-title {
+    margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+    .musica-title {
+        margin-bottom: 45px;
+    }
+}
+@media (min-width: 1200px) {
+    .musica-title {
+        margin-bottom: 55px;
+    }
+}
+.musica-title span {
+    line-height: 30px;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+@media (min-width: 768px) {
+    .musica-title span {
+        line-height: 42px;
+        font-size: 42px;
+    }
+}
+@media (min-width: 992px) {
+    .musica-title span {
+        line-height: 62px;
+        font-size: 62px;
+    }
+}
+
+.musica-list {
+    position: relative;
+    padding: 0 30px;
+}
+.musica-list ul {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.musica-list ul .item {
+    display: inline-block;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    padding: 0 10px;
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .musica-list ul .item {
+        width: 50%;
+    }
+}
+@media (min-width: 992px) {
+    .musica-list ul .item {width: 33.33%;}
+}
+@media (min-width: 1200px) {
+    .musica-list ul .item {width: 25%;}
+}
+@media (min-width: 1400px) {
+    .musica-list ul .item {width: 20%;}
+}
+
+.musica-list ul .item a {
+    display: inline-block;
+}
+
+.musica-list ul .item a div {
+    transition: 0.3s border-radius ease-in-out;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.musica-list ul .item a:hover div {
+    border-radius: 0;
+}
+
+.musica-list ul .item a div .track-img img{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+.musica-list ul .item a div .track-name {
+    transition: 0.3s opacity ease-in-out;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    line-height: 240px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+@media (min-width: 768px) {
+    .musica-list ul .item a div .track-name {line-height: 310px;}
+}
+@media (min-width: 992px) {
+    .musica-list ul .item a div .track-name {line-height: 280px;}
+}
+@media (min-width: 1200px) {
+    .musica-list ul .item a div .track-name {line-height: 256px;}
+}
+@media (min-width: 1400px) {
+    .musica-list ul .item a div .track-name {line-height: 232px;}
+}
+.musica-list ul .item a:hover div .track-name {
+    opacity: 0;
+}
+
+.musica-list ul .item a div .track-controls {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+
+.musica-list .MS-controls button {
+    position: absolute;
+    padding: 0;
+    margin: auto 0;
+    border: 0;
+    background: transparent;
+    font-size: 30px;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    outline: 0;
+    top: 0;
+    bottom: 0;
+}
+.musica-list .MS-controls .MS-left {
+    left: 0;
+}
+.musica-list .MS-controls .MS-right {
+    right: 0;
+}
+.musica-list .MS-controls button .fa {
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: var(--color-primary);
+}
