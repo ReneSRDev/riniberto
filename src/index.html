@@ -39,7 +39,7 @@
                             <a href="#skillSection">Habilidades</a>
                         </li>
                         <li>
-                            <a href="/">Proyectos</a>
+                            <a href="#projectSection">Proyectos</a>
                         </li>
                         <li>
                             <a href="/">Mi Musica</a>
@@ -164,6 +164,34 @@
                 </div>
             </div>
         </div>
+
+        <div class="index-proyectos" id="projectSection">
+            <div class="container">
+                <div class="proyectos-title">
+                    <span>Proyectos</span>
+                </div>
+                <div class="proyectos-text">
+                    <span>Proximamente</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="index-musica" id="musicSection">
+            <div class="container">
+                <div class="musica-title">
+                    <span>Mi Musica</span>
+                </div>
+                <div class="musica-list" id="musicSlider">
+                    <ul class="MS-content" id="musicContent">
+                        
+                    </ul>
+                    <div class="MS-controls">
+                        <button class="MS-left"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                        <button class="MS-right"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -171,5 +199,17 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/multislider.min.js"></script>
+    <script>
+        $('#musicSlider').multislider({
+            continue: true,
+            interval: 5000,
+            duration: 1000
+        });
+    </script>
+
+    <script src="./assets/main.js"></script>
 </body>
 </html>
