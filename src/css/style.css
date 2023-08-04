@@ -995,6 +995,7 @@ main {
 @media (min-width: 992px) {
     .index-musica >div {
         padding: 75px 0;
+        text-align: left;
     }
 }
 @media (min-width: 1200px) {
@@ -1042,7 +1043,7 @@ main {
 .musica-list ul {
     margin: 0;
     padding: 0;
-    width: auto;
+    width: 100%;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -1071,28 +1072,27 @@ main {
     .musica-list ul .item {width: 20%;}
 }
 
-.musica-list ul .item a {
-    display: inline-block;
-}
-
-.musica-list ul .item a div {
+.musica-list ul .item >div {
     transition: 0.3s border-radius ease-in-out;
+    display: inline-block;
     position: relative;
     border-radius: 50%;
     overflow: hidden;
+    cursor: pointer;
+    text-align: center;
 }
-.musica-list ul .item a:hover div {
+.musica-list ul .item >div:hover {
     border-radius: 0;
 }
 
-.musica-list ul .item a div .track-img img{
+.musica-list ul .item >div .track-img img{
     width: auto;
     max-width: 100%;
     height: auto;
     max-height: 100%;
 }
 
-.musica-list ul .item a div .track-name {
+.musica-list ul .item >div .track-name {
     transition: 0.3s opacity ease-in-out;
     position: absolute;
     top: 0;
@@ -1106,22 +1106,22 @@ main {
     color: var(--color-primary);
 }
 @media (min-width: 768px) {
-    .musica-list ul .item a div .track-name {line-height: 310px;}
+    .musica-list ul .item >div .track-name {line-height: 310px;}
 }
 @media (min-width: 992px) {
-    .musica-list ul .item a div .track-name {line-height: 280px;}
+    .musica-list ul .item >div .track-name {line-height: 280px;}
 }
 @media (min-width: 1200px) {
-    .musica-list ul .item a div .track-name {line-height: 256px;}
+    .musica-list ul .item >div .track-name {line-height: 256px;}
 }
 @media (min-width: 1400px) {
-    .musica-list ul .item a div .track-name {line-height: 232px;}
+    .musica-list ul .item >div .track-name {line-height: 232px;}
 }
-.musica-list ul .item a:hover div .track-name {
+.musica-list ul .item >div:hover .track-name {
     opacity: 0;
 }
 
-.musica-list ul .item a div .track-controls {
+.musica-list ul .item >div .track-controls {
     position: absolute;
     z-index: -1;
     opacity: 0;
@@ -1150,8 +1150,223 @@ main {
     right: 0;
 }
 .musica-list .MS-controls button .fa {
+    transition: 0.3s color ease-in-out;
     width: 30px;
     line-height: 30px;
     text-align: center;
     color: var(--color-primary);
+}
+
+.musica-list .MS-controls button:hover .fa {
+    color: var(--color-secondary);
+}
+
+/*CONTACTAME*/
+.index-contactame {
+    background-color: var(--bg-secondary);
+}
+
+.index-contactame >div {
+    padding: 30px 0;
+    text-align: center;
+}
+@media (max-width: 767px) {
+    .index-contactame >div {
+        max-width: 320px;
+    }
+}
+@media (min-width: 768px) {
+    .index-contactame >div {
+        padding: 50px 0;
+    }
+}
+@media (min-width: 992px) {
+    .index-contactame >div {
+        padding: 75px 0;
+        text-align: left;
+    }
+}
+@media (min-width: 1200px) {
+    .index-contactame >div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 100px 0;
+    }
+}
+
+.index-contactame >div:before,
+.index-contactame >div:after {
+    display: none;
+}
+
+.contactame-title {
+    margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+    .contactame-title {
+        margin-bottom: 45px;
+    }
+}
+@media (min-width: 1200px) {
+    .contactame-title {
+        width: 100%;
+        margin-bottom: 55px;
+    }
+}
+.contactame-title span {
+    line-height: 30px;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+@media (min-width: 768px) {
+    .contactame-title span {
+        line-height: 42px;
+        font-size: 42px;
+    }
+}
+@media (min-width: 992px) {
+    .contactame-title span {
+        line-height: 62px;
+        font-size: 62px;
+    }
+}
+
+.contactame-list {
+    margin-bottom: 50px;
+}
+@media (min-width: 1200px) {
+    .contactame-list {
+        margin-bottom: 0;
+    
+    }
+}
+.contactame-list ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contactame-list ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-primary);
+}
+@media (min-width: 1200px) {
+    .contactame-list ul li {
+        justify-content: flex-start;
+    }
+}
+@media (max-width: 1199px) {
+    .contactame-list ul li:nth-child(1n + 2) {
+        margin-top: 30px;
+    }
+}
+@media (min-width: 1200px) {
+    .contactame-list ul li:nth-child(1n + 2) {
+        margin-top: 50px;
+    }
+}
+
+.contactame-list ul li .fa {
+    font-size: 20px;
+    margin-right: 10px;
+}
+@media (min-width: 992px) {
+    .contactame-list ul li .fa{
+        font-size: 25px;
+    }
+}
+
+.contactame-list ul li span{
+    font-size: 18px;
+    font-weight: 700;
+}
+@media (min-width: 992px) {
+    .contactame-list ul li span{
+        font-size: 25px;
+    }
+}
+
+.contactame-form {
+    padding: 0 30px;
+}
+@media (min-width: 768px) {
+    .contactame-form {
+        padding: 0;
+    }
+}
+
+.contactame-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 15px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.3);
+}
+
+@media (min-width: 768px) {
+    .contactame-form form {
+        width: 80%;
+        padding: 50px;
+        margin:  0 auto;
+        max-width: 530px;
+    }
+}
+@media (min-width: 1200px) {
+    .contactame-form form {
+        width: 530px;
+        max-width: none;
+    }
+}
+
+.contactame-form form #uName {
+    padding: 0 15px;
+    border-radius: 3px;
+    border: 1px solid rgba(255,255,255,0.6);
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+}
+.contactame-form form #uEmail {
+    margin-top: 15px;
+    padding: 0 15px;
+    border-radius: 3px;
+    border: 1px solid rgba(255,255,255,0.6);
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+}
+.contactame-form form #uText {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 3px;
+    border: 1px solid rgba(255,255,255,0.6);
+    height: 250px;
+    line-height: 16px;
+    font-size: 16px;
+}
+
+.contactame-form form #buttonEmail {
+    margin-top: 15px;
+    max-width: 300px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background-color: var(--color-primary);
+}
+@media (min-width: 768px) {
+    .contactame-form form #buttonEmail {
+        margin: 15px auto 0;
+        width: 300px;
+    }
 }

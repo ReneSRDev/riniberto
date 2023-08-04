@@ -14,20 +14,26 @@ async function fetchData(urlApi) {
     return data;
 }
 
+function pauseAudio() {
+    let audioTags = document.getElementsByClassName("track-controls");
+
+    for (let i=0; i < audioTags.length; i++) {
+        audioTags[i].pause();
+    }
+}
+
 (async () => {
     try {
         const songs = await fetchData(API);
         let view = `${songs.items.map(song => `
             <li class="item containerAudio">
-                <a href="${song.track.external_urls.spotify}" target="_blank" title="${song.track.name}">
-                    <div>
-                        <div class="track-img">
-                            <img src="${song.track.album.images[0].url}" alt="${song.track.album.name}">
-                        </div>
-                        <span class="track-name">${song.track.name}</span>
-                        <audio controls class="track-controls" src="${song.track.preview_url}"></audio>
+                <div>
+                    <div class="track-img">
+                        <img src="${song.track.album.images[0].url}" alt="${song.track.album.name}">
                     </div>
-                </a>
+                    <span class="track-name">${song.track.name}</span>
+                    <audio controls class="track-controls" src="${song.track.preview_url}"></audio>
+                </div>
             </li>
         `).slice(0,9).join('')}
         `;
@@ -35,6 +41,7 @@ async function fetchData(urlApi) {
 
         $(document).ready(function() {
             $(".containerAudio").on("click", function(){
+                pauseAudio();
                 audioElement = $(this).find('.track-controls');
                 audioElement[0].play();
             });

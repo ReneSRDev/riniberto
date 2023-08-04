@@ -42,7 +42,7 @@
                             <a href="#projectSection">Proyectos</a>
                         </li>
                         <li>
-                            <a href="/">Mi Musica</a>
+                            <a href="#musicSection">Mi Musica</a>
                         </li>
                     </ul>
                     <ul class="header-social">
@@ -58,7 +58,7 @@
                         </li>
                     </ul>
                     <div class="header-contact">
-                        <a href="/" title="Contactame llenando el formulario">
+                        <a href="#contactame" title="Contactame llenando el formulario">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
                             <span>Contacto</span>
                         </a>
@@ -189,6 +189,38 @@
                         <button class="MS-left"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
                         <button class="MS-right"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="index-contactame" id="contactame">
+            <div class="container">
+                <div class="contactame-title">
+                    <span>Contactame</span>
+                </div>
+                <div class="contactame-list">
+                    <ul>
+                        <li>
+                            <i class="fa fa-mobile-screen" aria-hidden="true"></i>
+                            <span>612-131-9612</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <span>rene141288@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-location-dot" aria-hidden="true"></i>
+                            <span>La Paz, BCS 23050</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contactame-form">
+                    <form method="post">
+                        <input type="text" name="userName" id="uName" placeholder="Nombre Completo">
+                        <input type="email" name="userEmail" id="uEmail" placeholder="Correo Electronico">
+                        <textarea type="text" name="userText" id="uText" placeholder="Escriba su informacion para contactarlo..."></textarea>
+                        <input type="button" value="Enviar" id="buttonEmail" onclick="sendEmail()">
+                    </form>
                 </div>
             </div>
         </div>
