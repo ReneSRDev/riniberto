@@ -15,6 +15,39 @@
     <link rel="stylesheet" href="./css/style.css">
 
     <script src="https://kit.fontawesome.com/8b1059fd4f.js" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+        function sendEmail() {
+            let uName = document.getElementById("uName");
+            let uMail = document.getElementById("uEmail");
+            let uText = document.getElementById("uText");
+            let textoName = document.querySelector(".textoName");
+            let textoMail = document.querySelector(".textoMail");
+            let textoText = document.querySelector(".textoText");
+            let contenedorInfo = document.querySelector('.contactame-form form');
+
+            textoName.classList.add('oculto');
+            textoMail.classList.add('oculto');
+            textoText.classList.add('oculto');
+
+            if(uName.value === "") {
+                textoName.classList.remove('oculto');
+            }
+            if(uMail.value === "") {
+                textoMail.classList.remove('oculto');
+            }
+            if(uText.value === "") {
+                textoText.classList.remove('oculto');
+            }
+            if (uName.value != "" && uMail.value != "" && uText.value != "") {
+                let correoEnviado = `
+                    <span class="confirmacionCorreo">Su correo ha sido enviado exitosamente</span>
+                `;
+                
+                contenedorInfo.innerHTML = correoEnviado;
+            }
+        }
+    </script>
 </head>
 <body>
     <header class="navbar navbar-expand-lg">
@@ -217,8 +250,11 @@
                 <div class="contactame-form">
                     <form method="post">
                         <input type="text" name="userName" id="uName" placeholder="Nombre Completo">
+                        <span class="textoFormulario textoName oculto">Llene la casilla con su Nombre Completo</span>
                         <input type="email" name="userEmail" id="uEmail" placeholder="Correo Electronico">
+                        <span class="textoFormulario textoMail oculto">Llene la casilla con su correo electronico</span>
                         <textarea type="text" name="userText" id="uText" placeholder="Escriba su informacion para contactarlo..."></textarea>
+                        <span class="textoFormulario textoText oculto">Debe llenar la casilla con la informacion basica de contacto</span>
                         <input type="button" value="Enviar" id="buttonEmail" onclick="sendEmail()">
                     </form>
                 </div>
